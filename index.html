@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Portafolio de Miguel Angel Lucio">
@@ -16,16 +15,19 @@
     <link rel="stylesheet" href="style.css">
     <!-- Libreria FontAwesome para iconos en el sitio mediante cdnjs -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Solo la necesito para el icono Tailwind, C#-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-<!-- Barra de navegacion -->
 <body>
+    
+    <!-- Barra de navegacion -->
     <div class="contenedor-principal">
         <nav class="barra-navegacion">
             <div class="logo">MIGUEL<span>.DEV</span></div>
             <div class="links-navegacion">
                 <a href="#inicio">Inicio</a>
                 <a href="#proyectos">Proyectos</a>
-                <a href="#Formacion">Experiencia y formación</a>
+                <a href="#formacion">Experiencia y formación</a>
                 <a href="#habilidades">Habilidades</a>
                 <a href="#contacto">Contacto</a>
             </div>
@@ -39,7 +41,7 @@
                     <h1>Miguel Ángel<br><span class="texto-neon">Lucio Guillén</span></h1>
                     <p class="rol">Ingeniero de Sistemas en Formación & Desarrollador</p>
                     <p class="descripcion">
-                        Estudiante de 8° semestre de ingeniería de sistemas apasionado por la creación de soluciones tecnológicas
+                        Estudiante de 8° semestre de ingeniería de sistemas con muchas ganas de aprender y apasionado por la creación de soluciones tecnológicas
                         innovadoras y el análisis de datos. 
                         Transformando ideas en realidad digital.
                     </p>
@@ -50,16 +52,17 @@
                 </div>
                 <div class="inicio-imagen">
                     <div class="imagen-frame">
-                        <img src="images/FotoHV.jpg" alt="Miguel Angel Lucio">
+                        <img src="images/FotoHV.jpeg" alt="Miguel Angel Lucio">
                     </div>
                 </div>
             </div>
         </header>
 
         <!-- Seccion proyectos -->
-        <section id="proyectos" class="seccion">
+        <section id="proyectos" class="seccion proyectos">
             <h2 class="titulo-seccion">Mis <span class="resaltar">Proyectos</span></h2>
             <div class="matriz-proyectos">
+
                 <!-- Proyecto 1 -->
                 <div class="tarjeta-proyecto">
                     <a href="https://github.com/AIgobernance/Proyecto-Gestion"></a>
@@ -122,23 +125,37 @@
             </div>
         </section>
 
-        <!-- Seccion de educacion e idiomas -->
-        <section id="Formacion" class="seccion dividir-seccion">
+        <!-- Seccion de formacion, idiomas y experiencia laboral -->
+        <section id="formacion" class="seccion dividir-seccion">
+            
+            <!-- Seccion formacion -->
             <div class="educacion">
                 <h2 class="titulo-seccion">Formación</h2>
                 <div class="linea-tiempo">
                     <div class="items-linea">
                         <span class="año">2022 - Presente</span>
-                        <h3>Ingeniería de Sistemas</h3>
+                        <h3>Ingeniero de Sistemas</h3>
                         <p>Universidad Santiago de Cali</p>
+                    </div>
+                    <div class="items-linea">
+                        <span class="año">2022</span>
+                        <h3>Técnico en asistencia administrativa</h3>
+                        <p>SENA</p>
                     </div>
                     <div class="items-linea">
                         <span class="año">2022</span>
                         <h3>Bachiller académico</h3>
                         <p>Colegio Americas Unidas</p>
                     </div>
+                    <div class="items-linea">
+                        <span class="año">2021</span>
+                        <h3>Servicio al cliente</h3>
+                        <p>SENA</p>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Seccion idiomas -->
             <div class="idiomas">
                 <h2 class="titulo-seccion">Idiomas</h2>
                 <div class="contenedor-idiomas">
@@ -186,37 +203,105 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Seccion experiencia laboral -->
             <div class="experiencia">
                 <h2 class="titulo-seccion">Experiencia laboral</h2>
                 <div class="linea-tiempo">
                     <div class="items-linea">
-                        <span class="año">2022 - Presente</span>
-                        <h3>Ingeniería de Sistemas</h3>
-                        <p>Universidad Santiago de Cali</p>
-                    </div>
-                    <div class="items-linea">
-                        <span class="año">2022</span>
-                        <h3>Bachiller académico</h3>
+                        <span class="año">2021 - 2022</span>
+                        <h3>Auxiliar Administrativo</h3>
                         <p>Colegio Americas Unidas</p>
+                        <span class="descripcion-laboral">Organización y clasificación de archivos académicos,control documental, apoyo en procesos de matrícula y 
+                            asistencia en tareas administrativas generales.</span>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
 
-        <!-- Experience Section -->
-        <section class="section">
-            <h2 class="section-title">Experiencia</h2>
-            <div class="experience-grid">
-                <div class="exp-card">
-                    <h3>Analista de Sistemas</h3>
-                    <h4>Empresa TechSoft | 2023 - Actualidad</h4>
-                    <p>Desarrollo de reportes, automatización de procesos y soporte a sistemas críticos.</p>
+        <!-- Seccion habilidades -->
+        <section id="habilidades" class="seccion habilidades">
+            <h2 class="titulo-seccion">Habilidades <span class="resaltar">Técnicas</span></h2>
+            
+            <!-- Frontend -->
+            <h3 class="titulo-tecnologias"><i class="fa-solid fa-code"></i> Frontend</h3>
+            <div class="tecnologias-matriz">
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <span class="nombre-tecnologia">HTML5</span>
                 </div>
-                <div class="exp-card">
-                    <h3>Auxiliar de TI</h3>
-                    <h4>Empresa DataPlus | 2021 - 2023</h4>
-                    <p>Soporte técnico de nivel 1 y 2, gestión de bases de datos y documentación técnica.</p>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <span class="nombre-tecnologia">CSS3</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <span class="nombre-tecnologia">JavaScript</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <span class="nombre-tecnologia">React</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="devicon-tailwindcss-plain"></i>
+                    </div>
+                    <span class="nombre-tecnologia">Tailwind</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="devicon-vitejs-plain"></i>
+                    </div>
+                    <span class="nombre-tecnologia">Vite</span>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <h3 class="titulo-tecnologias"><i class="fa-solid fa-server"></i> Backend</h3>
+            <div class="tecnologias-matriz">
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <span class="nombre-tecnologia">Python</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <span class="nombre-tecnologia">SQL Server</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <span class="nombre-tecnologia">Node.js</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <span class="nombre-tecnologia">PHP</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="fa-brands fa-laravel"></i>
+                    </div>
+                    <span class="nombre-tecnologia">Laravel</span>
+                </div>
+                <div class="tarjeta-tecnologias">
+                    <div class="icono-tecnologias">
+                        <i class="devicon-csharp-plain"></i>
+                    </div>
+                    <span class="nombre-tecnologia">C#</span>
                 </div>
             </div>
         </section>
@@ -227,12 +312,17 @@
                 <h2>¿Trabajamos juntos?</h2>
                 <p>Estoy disponible para nuevos proyectos y colaboraciones.</p>
                 <div class="redes-sociales">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
-                    <a href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/miguel-angel-lucio-guillen-11750214b/">
+                        <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/StellAsh45">
+                        <i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:mlucioguillen@gmail.com?subject=Contacto%20desde%20Portafolio">
+                        <i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/3053029631?text=Hola%20Miguel,%20vi%20tu%20portafolio">
+                        <i class="fa-brands fa-whatsapp"></i></a>
                 </div>
                 <div class="derechos-autor">
-                    &copy; 2026 Miguel Angel Lucio. Todos los derechos reservados.
+                    &copy; 2026 Miguel Angel Lucio.
                 </div>
             </div>
         </footer>
