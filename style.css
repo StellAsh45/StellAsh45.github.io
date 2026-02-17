@@ -4,6 +4,7 @@
     box-sizing: border-box; 
     scroll-behavior: smooth; /* Para que el scroll sea suave al hacer clic en los enlaces de navegación */
 }
+
 /* Variables de color que se usaran en el sitio web */
 :root {
     --fondo-oscuro: #050510;
@@ -542,4 +543,160 @@ section, header, footer {
     color: var(--texto-secundario);
     font-size: 14px;
     margin-top: 30px;
+}
+
+.boton-añadir{
+    background: transparent;
+    border: none;
+    color: var(--primario);
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.boton-añadir:hover {
+    color: var(--secundario);
+    transform: scale(1.2);
+}
+
+.items-linea,
+.tarjeta-idiomas,
+.tarjeta-tecnologias,
+.tarjeta-proyecto {
+    position: relative;
+}
+
+.boton-borrar{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.boton-borrar:hover {
+    background: #ff4d4d;
+    color: white;
+    transform: scale(1.1);
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-contenido{
+    background-color: var(--fondo-tarjetas);
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid var(--primario);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(8, 243, 255, 0.2);
+    position: relative;
+    animation: modalAnim 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación de aparición del modal*/
+}
+
+@keyframes modalAnim {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cerrar-modal {
+    color: var(--texto-secundario);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.cerrar-modal:hover {
+    color: var(--primario);
+}
+
+.modal h2{
+    color: var(--primario);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.campo-formulario{
+    margin-bottom: 15px;
+}
+
+.campo-formulario label{
+    display: block;
+    color: var(--texto-secundario);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.campo-formulario input, .campo-formulario select, .campo-formulario textarea{
+    width:100%;
+    padding:10px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:5px;
+    color:white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.campo-formulario input:focus, .campo-formulario select:focus, .campo-formulario textarea:focus{
+    outline:none;
+    border-color: var(--primario);
+    box-shadow: 0 0 5px var(--primario);
+}
+
+.campo-formulario select option{
+    background-color: var(--fondo-tarjetas);
+    color: white;
+}
+
+.boton-guardar {
+    width: 100%;
+    padding: 12px;
+    background: var(--gradiente);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.boton-guardar:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.4);
 }

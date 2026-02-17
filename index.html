@@ -130,8 +130,9 @@
             
             <!-- Seccion formacion -->
             <div class="educacion">
-                <h2 class="titulo-seccion">Formación</h2>
-                <div class="linea-tiempo">
+                <h2 class="titulo-seccion">Formación <button class="boton-añadir" onclick="abrirModal('formacion')">
+                    <i class="fa-solid fa-plus"></i></button></h2>
+                <div class="linea-tiempo" id="lista-formacion">
                     <div class="items-linea">
                         <span class="año">2022 - Presente</span>
                         <h3>Ingeniero de Sistemas</h3>
@@ -157,8 +158,9 @@
             
             <!-- Seccion idiomas -->
             <div class="idiomas">
-                <h2 class="titulo-seccion">Idiomas</h2>
-                <div class="contenedor-idiomas">
+                <h2 class="titulo-seccion">Idiomas <button class="boton-añadir" onclick="abrirModal('idioma')">
+                    <i class="fa-solid fa-plus"></i></button></h2>
+                <div class="contenedor-idiomas" id="lista-idiomas">
                     <div class="tarjeta-idiomas">
                         <div class="informacion-idiomas">
                             <h3>Español</h3>
@@ -206,8 +208,9 @@
 
             <!-- Seccion experiencia laboral -->
             <div class="experiencia">
-                <h2 class="titulo-seccion">Experiencia laboral</h2>
-                <div class="linea-tiempo">
+                <h2 class="titulo-seccion">Experiencia laboral <button class="boton-añadir" onclick="abrirModal('experiencia')">
+                    <i class="fa-solid fa-plus"></i></button></h2>
+                <div class="linea-tiempo" id="lista-experiencia">
                     <div class="items-linea">
                         <span class="año">2021 - 2022</span>
                         <h3>Auxiliar Administrativo</h3>
@@ -221,11 +224,12 @@
 
         <!-- Seccion habilidades -->
         <section id="habilidades" class="seccion habilidades">
-            <h2 class="titulo-seccion">Habilidades <span class="resaltar">Técnicas</span></h2>
-            
+            <h2 class="titulo-seccion">Habilidades <span class="resaltar">Técnicas</span> <button class="boton-añadir" onclick="abrirModal('habilidad')">
+                    <i class="fa-solid fa-plus"></i></button></h2></h2>
+
             <!-- Frontend -->
             <h3 class="titulo-tecnologias"><i class="fa-solid fa-code"></i> Frontend</h3>
-            <div class="tecnologias-matriz">
+            <div class="tecnologias-matriz" id="lista-habilidades-frontend">
                 <div class="tarjeta-tecnologias">
                     <div class="icono-tecnologias">
                         <i class="fa-brands fa-html5"></i>
@@ -266,7 +270,7 @@
 
             <!-- Backend -->
             <h3 class="titulo-tecnologias"><i class="fa-solid fa-server"></i> Backend</h3>
-            <div class="tecnologias-matriz">
+            <div class="tecnologias-matriz" id="lista-habilidades-backend">
                 <div class="tarjeta-tecnologias">
                     <div class="icono-tecnologias">
                         <i class="fa-brands fa-python"></i>
@@ -305,6 +309,20 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal para añadir elementos -->
+        <div id="modal-agregar" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+                <h2 id="modal-titulo">Añadir Nuevo Elemento</h2>
+                <form id="form-agregar">
+                    <div id="campos-dinamicos">
+                        <!-- Aqui se supone que iran los campos -->
+                    </div>
+                    <button type="submit" class="boton-guardar">Guardar</button>
+                </form>
+            </div>
+        </div>
 
         <!-- Pie de pagina -->
         <footer id="contacto" class="pie-pagina">
